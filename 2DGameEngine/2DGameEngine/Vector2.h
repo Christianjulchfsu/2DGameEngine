@@ -29,6 +29,5 @@ public:
 	bool equals(Vector2D _vec);
 	void normalize();
 	void set(float _x, float _y);
-
 };
 
