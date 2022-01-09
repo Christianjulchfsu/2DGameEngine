@@ -1,65 +1,97 @@
 #include "stdafx.h"
 #include "Vector2.h"
 
-Vector2 Vector2::down()
+Vector2D::Vector2D()
 {
-    return Vector2();
+    xValue = 0.0f;
+    yValue = 0.0f;
 }
 
-Vector2 Vector2::up()
+Vector2D::Vector2D(float _x, float _y)
 {
-    return Vector2();
+    xValue = _x;
+    yValue = _y;
 }
 
-Vector2 Vector2::right()
+Vector2D::~Vector2D() {}
+
+Vector2D Vector2D::down()
 {
-    return Vector2();
+    return Vector2D(0.0f, -1.0f);
 }
 
-Vector2 Vector2::left()
+Vector2D Vector2D::up()
 {
-    return Vector2();
+    return Vector2D(0.0f, 1.0f);
 }
 
-Vector2 Vector2::one()
+Vector2D Vector2D::right()
 {
-    return Vector2();
+    return Vector2D(1.0f, 0.0f);
 }
 
-Vector2 Vector2::zero()
+Vector2D Vector2D::left()
 {
-    return Vector2();
+    return Vector2D(-1.0f, 0.0f);
 }
 
-float Vector2::magnitude()
+Vector2D Vector2D::one()
 {
-    return 0.0f;
+    return Vector2D(1.0f, 1.0f);
 }
 
-Vector2 Vector2::normalized()
+Vector2D Vector2D::zero()
 {
-    return Vector2();
+    return Vector2D(0.0f, 0.0f);
 }
 
-float Vector2::x()
+float Vector2D::magnitude()
 {
-    return 0.0f;
+    float m = sqrt(xValue * xValue + yValue * yValue);
+    return m;
 }
 
-float Vector2::y()
+Vector2D Vector2D::normalized()
 {
-    return 0.0f;
+    float m = magnitude();
+    float x = x / m;
+    float y = y / m;
+
+    return Vector2D(x, y);
 }
 
-bool Vector2::equals(Vector2 _vec)
+float Vector2D::x()
 {
+    return xValue;
+}
+
+float Vector2D::y()
+{
+    return yValue;
+}
+
+bool Vector2D::equals(Vector2D _vec)
+{
+    float x = _vec.x();
+    float y = _vec.y();
+
+    if (x == xValue && y == yValue) {
+        return true;
+    }
+
     return false;
 }
 
-void Vector2::normalize()
+void Vector2D::normalize()
 {
+    float m = magnitude();
+
+    xValue = xValue / m;
+    yValue = yValue / m;
 }
 
-void Vector2::set(float _x, float _y)
+void Vector2D::set(float _x, float _y)
 {
+    xValue = _x;
+    yValue = _y;
 }
