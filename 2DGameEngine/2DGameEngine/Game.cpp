@@ -13,10 +13,12 @@ void Game::input()
 	while (window.pollEvent(ev))
 	{
 		if (ev.type == sf::Event::Closed) {
+			debug.log("-Closing Application-");
 			window.close();
 		}
 		else if (ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::Escape)
 		{
+			debug.log("-Closing Application-");
 			window.close();
 		}
 	}
@@ -46,4 +48,5 @@ const sf::RenderWindow& Game::getWindow() const
 void Game::initWindow()
 {
 	window.create(sf::VideoMode(800, 600), "Title", sf::Style::Close | sf::Style::Titlebar);
+	debug.log("(Application) Window Succesfuly Created!");
 }

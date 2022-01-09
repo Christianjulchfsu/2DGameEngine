@@ -3,6 +3,8 @@
 class Game
 {
 public:
+	Dbg debug;
+
 	sf::RenderWindow window;
 	sf::Event ev;
 
