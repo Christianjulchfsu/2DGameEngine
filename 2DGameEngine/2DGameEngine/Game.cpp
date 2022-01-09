@@ -11,7 +11,7 @@ Game::Game(int _width, int _height)
 
 Game::~Game() {}
 
-void Game::inputs()
+void Game::input()
 {
 	// Poll window events
 	while (window.isOpen())
@@ -30,8 +30,7 @@ void Game::inputs()
 
 void Game::update()
 {
-	// Run inputs before updating.
-	inputs();
+	input();
 }
 
 void Game::render()
