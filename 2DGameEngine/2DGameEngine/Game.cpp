@@ -6,10 +6,7 @@ Game::Game()
 	initWindow();
 }
 
-Game::~Game()
-{
-
-}
+Game::~Game() {}
 
 void Game::input()
 {
@@ -32,8 +29,12 @@ void Game::update()
 
 void Game::render()
 {
+	// Clear //
 	window.clear();
 
+	// Draw //
+
+	// Display //
 	window.display();
 }
 
