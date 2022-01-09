@@ -1,7 +1,12 @@
 #include "stdafx.h"
+#include "Transform.h"
 
-// Every game object should have a transform and basic awareness of itself and others in a scene.
 class GameObject
 {
+public:
+	std::string name;
+	std::string tag;
+
+	Transform transform;
 };
 
