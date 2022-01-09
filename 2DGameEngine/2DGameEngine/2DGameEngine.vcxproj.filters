@@ -23,6 +23,15 @@
     <ClInclude Include="Dbg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>Model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -36,6 +45,15 @@
     </ClCompile>
     <ClCompile Include="Dbg.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2D.cpp">
+      <Filter>Model</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

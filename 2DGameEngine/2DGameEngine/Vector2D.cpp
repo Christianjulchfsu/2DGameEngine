@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Vector2.h"
+#include "Vector2D.h"
 
 Vector2D::Vector2D()
 {
@@ -54,10 +54,10 @@ float Vector2D::magnitude()
 Vector2D Vector2D::normalized()
 {
     float m = magnitude();
-    float x = x / m;
-    float y = y / m;
+    float _x = xValue / m;
+    float _y = yValue / m;
 
-    return Vector2D(x, y);
+    return Vector2D(_x, _y);
 }
 
 float Vector2D::x()
