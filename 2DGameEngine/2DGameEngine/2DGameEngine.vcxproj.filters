@@ -38,6 +38,9 @@
     <ClInclude Include="Player.h">
       <Filter>Objects</Filter>
     </ClInclude>
+    <ClInclude Include="Graphic2D.h">
+      <Filter>Model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -63,6 +66,9 @@
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic2D.cpp">
+      <Filter>Model</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

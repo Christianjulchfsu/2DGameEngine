@@ -4,6 +4,8 @@
 int main() {
 	Game game;
 
+	game.start();
+
 	while (game.getWindow().isOpen())
 	{
 		game.update();

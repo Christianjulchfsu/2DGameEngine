@@ -1,3 +1,4 @@
+#pragma once
 #include "stdafx.h"
 #include "Transform.h"
 
@@ -11,5 +12,8 @@ public:
 	std::string tag;
 
 	Transform transform;
+
+	virtual void update();
+	virtual void render(sf::RenderTarget& target);
 };
 

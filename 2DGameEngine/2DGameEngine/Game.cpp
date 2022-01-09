@@ -3,10 +3,21 @@
 
 Game::Game()
 {
+	player = new Player();
 	initWindow();
 }
 
-Game::~Game() {}
+Game::~Game() {
+	for (unsigned i = 0; i < gameObjects.size(); i++)
+	{
+		delete gameObjects[i];
+	}
+}
+
+void Game::start()
+{
+	gameObjects.push_back(player);
+}
 
 void Game::input()
 {
@@ -21,12 +32,23 @@ void Game::input()
 			debug.log("-Closing Application-");
 			window.close();
 		}
+
+		if (ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::W)
+		{
+			player->name = "Max";
+			std::cout<< "Playername: " << player->name << std::endl;
+		}
 	}
 }
 
 void Game::update()
 {
 	input();
+
+	for (unsigned i = 0; i < gameObjects.size(); i++)
+	{
+		gameObjects[i]->update();
+	}
 }
 
 void Game::render()
@@ -35,6 +57,10 @@ void Game::render()
 	window.clear();
 
 	// Draw //
+	for (unsigned i = 0; i < gameObjects.size(); i++)
+	{
+		gameObjects[i]->render(window);
+	}
 
 	// Display //
 	window.display();
