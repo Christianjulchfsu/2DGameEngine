@@ -8,6 +8,7 @@ private:
 	Vector2D rotation;
 	Vector2D scale;
 
+public:
 	Transform();
 	virtual ~Transform();
 

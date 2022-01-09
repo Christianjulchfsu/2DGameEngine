@@ -4,6 +4,9 @@
 class GameObject
 {
 public:
+	GameObject();
+	virtual ~GameObject();
+
 	std::string name;
 	std::string tag;
 

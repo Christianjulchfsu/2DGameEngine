@@ -12,6 +12,9 @@
     <Filter Include="Model">
       <UniqueIdentifier>{429f55e3-c6ae-48d7-b763-a9a7cdb91bb2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{7540456a-be82-452d-b132-fd2dee40a8c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -31,6 +34,9 @@
     </ClInclude>
     <ClInclude Include="Vector2D.h">
       <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +60,9 @@
     </ClCompile>
     <ClCompile Include="Vector2D.cpp">
       <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Objects</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
